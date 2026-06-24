@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8080}
+  port: 8080
   address: 0.0.0.0
 
 spring:
@@ -7,9 +7,9 @@ spring:
     name: ventas-libros
 
   datasource:
-    url: ${SPRING_DATASOURCE_URL}
-    username: ${SPRING_DATASOURCE_USERNAME}
-    password: ${SPRING_DATASOURCE_PASSWORD}
+    url: jdbc:postgresql://db.scwfwapgdacnabkbcqdp.supabase.co:5432/postgres?sslmode=require
+    username: postgres
+    password: XmhI0BKUq0knFSQ6sgreTyXP
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -19,7 +19,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
   sql:
     init:
