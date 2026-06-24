@@ -7,15 +7,15 @@ spring:
     name: ventas-libros
 
   datasource:
-    url: jdbc:postgresql://db.scwfwapgdacnabkbcqdp.supabase.co:5432/postgres
-    username: postgres
-    password: XmhI0BKUq0knFSQ6sgreTyXP
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         format_sql: true
@@ -27,5 +27,5 @@ spring:
 
 app:
   jwt:
-    secret: "0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF"
+    secret: ${JWT_SECRET}
     expiration-ms: 86400000
